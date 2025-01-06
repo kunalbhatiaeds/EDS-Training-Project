@@ -1,0 +1,147 @@
+/* Full-page container */
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e88e5, #64b5f6); /* Dynamic gradient */
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Form container */
+  form {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 16px; /* Softer, modern rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deep shadow for modern look */
+    width: 100%;
+    max-width: 420px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.03); /* Subtle zoom on hover */
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    }
+  }
+  
+  /* Logo styles */
+.logo-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  
+    .logo {
+      width: 150px; /* Increased width */
+      height: 150px; /* Increased height */
+      object-fit: contain;
+      border-radius: 50%; /* Circular logo */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  
+  /* Form title */
+  .login-header {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #1565c0;
+    text-transform: uppercase; /* Makes it stand out */
+    letter-spacing: 1px; /* Adds some spacing between letters */
+  }
+  
+  /* Form fields */
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 2rem;
+  
+    .mat-form-field-label {
+      font-size: 1.1rem;
+      color: #1976d2;
+      font-weight: 500;
+    }
+  
+    .mat-input-element {
+      font-size: 1rem;
+      padding: 0.8rem;
+      color: #333;
+    }
+  
+    &.mat-focused .mat-form-field-label {
+      color: #0d47a1; /* Darker blue for focus */
+      font-weight: bold;
+    }
+  
+    .mat-error {
+      font-size: 0.85rem;
+      color: #d32f2f; /* Red for error messages */
+    }
+  }
+  
+  /* Submit button */
+  button {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1.1rem;
+    background: linear-gradient(45deg, #1976d2, #42a5f5); /* Gradient button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+  
+    &:hover {
+      background: linear-gradient(45deg, #0d47a1, #1e88e5); /* Darker hover gradient */
+      transform: translateY(-3px); /* Lifting effect */
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+  
+    &:active {
+      transform: translateY(0); /* Neutralize lift effect */
+      box-shadow: none; /* Remove shadow when clicked */
+    }
+  
+    &:disabled {
+      background: #b0bec5; /* Grey for disabled state */
+      cursor: not-allowed;
+    }
+  }
+  
+  /* Error message */
+  .error-message {
+    text-align: center;
+    margin-top: 1rem;
+    color: #d32f2f;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    form {
+      padding: 2rem;
+    }
+  
+    .login-header {
+      font-size: 1.6rem;
+    }
+  
+    button {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    form {
+      max-width: 90%;
+      padding: 1.5rem;
+    }
+  
+    button {
+      font-size: 0.95rem;
+    }
+  }
+  

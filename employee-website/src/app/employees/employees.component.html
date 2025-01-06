@@ -1,0 +1,46 @@
+<form [formGroup]="searchForm">
+  <div class="search-container">
+    <mat-form-field appearance="fill" class="search-field">
+      <mat-label>Search Employees</mat-label>
+      <input matInput formControlName="searchTerm" placeholder="Enter search term" />
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </div>
+</form>
+
+<!-- Table displaying employee data -->
+<mat-table [dataSource]="filteredEmployeesDataSource">
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+    <mat-cell *matCellDef="let employee"> {{employee.id}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+    <mat-cell *matCellDef="let employee"> {{employee.employee_name}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="salary">
+    <mat-header-cell *matHeaderCellDef> Salary </mat-header-cell>
+    <mat-cell *matCellDef="let employee"> {{employee.employee_salary | salary}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="age">
+    <mat-header-cell *matHeaderCellDef> Age </mat-header-cell>
+    <mat-cell *matCellDef="let employee"> {{employee.employee_age | age}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="details">
+    <mat-header-cell *matHeaderCellDef> Details </mat-header-cell>
+    <mat-cell *matCellDef="let employee">
+      <button class="view-button" (click)="viewDetails(employee)">View</button>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  
+  <!-- Apply class based on index -->
+  <mat-row *matRowDef="let row; columns: displayedColumns" [ngClass]="{'odd-row': row.id % 2 !== 0, 'even-row': row.id % 2 === 0}"></mat-row>
+</mat-table>
+
+

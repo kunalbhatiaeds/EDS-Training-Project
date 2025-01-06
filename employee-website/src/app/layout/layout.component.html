@@ -1,0 +1,33 @@
+<mat-sidenav-container class="sidenav-container">
+  <!-- Sidenav Section -->
+  <mat-sidenav #sidenav mode="over" class="sidenav">
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <!-- Navigation Item: Employees -->
+      <a mat-list-item routerLink="/employees" routerLinkActive="active-link" (click)="sidenav.close()">
+        <mat-icon>people</mat-icon>
+        <span>Employees</span>
+      </a>
+      <!-- Navigation Item: Logout -->
+      <a mat-list-item (click)="logout(); sidenav.close()">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Main Content Section -->
+  <mat-sidenav-content class="sidenav-content">
+    <!-- Header Toolbar -->
+    <mat-toolbar color="primary" class="top-toolbar">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Employee Management</span>
+      <img src="../assets/logo.jpeg" alt="Logo" class="header-logo" />
+    </mat-toolbar>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

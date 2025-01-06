@@ -1,0 +1,24 @@
+<div *ngIf="employee; else loading" class="employee-details container">
+  <h2 appHighlight>{{ employee()?.employee_name }}</h2>
+  <div class="details">
+    <p>
+      <span class="label">Salary:</span>
+      <span class="value">
+        {{ employee()?.employee_salary !== undefined ? (employee()?.employee_salary! | salary) : 'N/A' }}
+      </span>
+    </p>
+    <p>
+      <span class="label">Age:</span>
+      <span class="value">
+        {{ employee()?.employee_age ? (employee()?.employee_age | age) : 'N/A' }}
+      </span>
+    </p>
+  </div>
+</div>
+
+<!-- Fallback template for loading state -->
+<ng-template #loading>
+  <div class="loading">
+    <p>Loading employee details...</p>
+  </div>
+</ng-template>
