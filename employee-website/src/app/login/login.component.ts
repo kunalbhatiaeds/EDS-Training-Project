@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
     this.router = _router;
     this.employeeService = _employeeService;
     
-    // Initialize signals here,
     this.errorMessage = signal(null);
     this.isSubmitting = signal(false);
   }
@@ -54,7 +53,7 @@ export class LoginComponent implements OnInit {
 
     this.employeeService.login(email, password).subscribe(
       (response) => {
-        this.isSubmitting.set(false); // Reset submitting state
+        this.isSubmitting.set(false); 
         if (response && response.token) {
           localStorage.setItem('authToken', response.token); // Save token in localStorage
           this.router.navigate(['/employees']); // Navigate to employees page
@@ -63,7 +62,7 @@ export class LoginComponent implements OnInit {
         }
       },
       (error) => {
-        this.isSubmitting.set(false); // Reset submitting state
+        this.isSubmitting.set(false); 
         this.errorMessage.set('Login failed: ' + (error.error?.message || 'Invalid email or password'));
       }
     );

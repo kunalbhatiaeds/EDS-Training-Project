@@ -8,7 +8,8 @@
   </div>
 </form>
 
-<!-- Table displaying employee data -->
+
+
 <mat-table [dataSource]="filteredEmployeesDataSource">
   <ng-container matColumnDef="id">
     <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
@@ -39,6 +40,7 @@
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   
+
   <!-- Apply class based on index -->
   <mat-row *matRowDef="let row; columns: displayedColumns" [ngClass]="{'odd-row': row.id % 2 !== 0, 'even-row': row.id % 2 === 0}"></mat-row>
 </mat-table>

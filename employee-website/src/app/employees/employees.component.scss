@@ -1,4 +1,4 @@
-/* Body container */
+
 :host {
   display: flex;
   flex-direction: column;
@@ -6,13 +6,12 @@
   align-items: center;
   min-height: 100vh;
   padding: 2rem;
-  background: linear-gradient(135deg, #2196F3, #1976D2); /* Blue gradient */
+  background-color: #e0f7fa; 
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
   margin: 0;
   overflow: hidden;
 }
-/* Search container styles */
 .search-container {
   width: 100%;
   max-width: 600px;
@@ -27,7 +26,6 @@
   background-image: linear-gradient(#e3f2fd, #e3f2fd), linear-gradient(135deg, #2196F3, #1976D2);
 }
 
-/* Mat form field styling */
 .search-field {
   width: 100%;
   background-color: #f9f9f9;
@@ -35,14 +33,12 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
 }
 
-/* Input element hover effect */
 .search-field.mat-form-field-appearance-fill .mat-form-field-infix {
   background-color: #ffffff;
   border-radius: 15px;
   border: 2px solid #1976D2;
 }
 
-/* View button styling */
 .view-button {
   background-color: #1976D2;
   color: white;
@@ -67,21 +63,19 @@
 }
 
 .odd-row {
-  background-color: #cfcfcf !important; /* Green background for odd rows */
-  color: rgb(0, 0, 0) !important; /* White text color */
+  background-color: #cfcfcf !important; 
+  color: rgb(0, 0, 0) !important; 
 }
 
-/* Even row styles */
 .even-row {
-  background-color: #ffffff !important; /* White background for even rows */
-  color: black !important; /* Black text color */
+  background-color: #ffffff !important; 
+  color: black !important; 
 }
 
-/* Optional: Add hover effect to rows */
 .mat-row:hover {
-  background-color: #f0f0f0 !important; /* Light gray background on hover */
+  background-color: #f0f0f0 !important; 
 }
-/* General mobile responsiveness */
+
 @media (max-width: 768px) {
   .search-container {
     width: 90%;

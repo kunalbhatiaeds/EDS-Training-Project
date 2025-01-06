@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #1e88e5, #64b5f6); /* Dynamic gradient */
+    background-color: #e0f7fa;
     font-family: 'Roboto', sans-serif;
   }
   
@@ -12,15 +12,15 @@
   form {
     background: #ffffff;
     padding: 2.5rem;
-    border-radius: 16px; /* Softer, modern rounded corners */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deep shadow for modern look */
+    border-radius: 16px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
     width: 100%;
     max-width: 420px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   
     &:hover {
-      transform: scale(1.03); /* Subtle zoom on hover */
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+      transform: scale(1.03);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); 
     }
   }
   
@@ -30,10 +30,10 @@
     margin-bottom: 1.5rem;
   
     .logo {
-      width: 150px; /* Increased width */
-      height: 150px; /* Increased height */
+      width: 150px; 
+      height: 150px; 
       object-fit: contain;
-      border-radius: 50%; /* Circular logo */
+      border-radius: 50%; 
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
   }
@@ -46,8 +46,8 @@
     font-weight: 700;
     margin-bottom: 2rem;
     color: #1565c0;
-    text-transform: uppercase; /* Makes it stand out */
-    letter-spacing: 1px; /* Adds some spacing between letters */
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
   }
   
   /* Form fields */
@@ -83,7 +83,7 @@
     width: 100%;
     padding: 0.8rem 1rem;
     font-size: 1.1rem;
-    background: linear-gradient(45deg, #1976d2, #42a5f5); /* Gradient button */
+    background: linear-gradient(45deg, #1976d2, #42a5f5); 
     color: white;
     border: none;
     border-radius: 8px;
@@ -94,18 +94,18 @@
     transition: background 0.3s ease, transform 0.3s ease;
   
     &:hover {
-      background: linear-gradient(45deg, #0d47a1, #1e88e5); /* Darker hover gradient */
+      background: linear-gradient(45deg, #0d47a1, #1e88e5); 
       transform: translateY(-3px); /* Lifting effect */
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }
   
     &:active {
       transform: translateY(0); /* Neutralize lift effect */
-      box-shadow: none; /* Remove shadow when clicked */
+      box-shadow: none; 
     }
   
     &:disabled {
-      background: #b0bec5; /* Grey for disabled state */
+      background: #b0bec5; 
       cursor: not-allowed;
     }
   }

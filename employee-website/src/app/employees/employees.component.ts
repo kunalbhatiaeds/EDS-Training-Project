@@ -30,7 +30,7 @@ export class EmployeesComponent implements OnInit {
 
     this.employeeService.getEmployees().subscribe((data: any) => {
       if (data && data.default && Array.isArray(data.default)) {
-        this.employees.set(data.default);  // Correct way to set signal value
+        this.employees.set(data.default);  // set signal value
         this.filteredEmployeesDataSource = new MatTableDataSource(this.employees());
 
         this.filteredEmployeesDataSource.filterPredicate = (data: any, filter: string) => {
@@ -47,9 +47,9 @@ export class EmployeesComponent implements OnInit {
       }
     });
 
-    // Subscribe to search term changes and update the signal
+    //search term changes and update the signal
     this.searchForm.get('searchTerm')?.valueChanges.subscribe(value => {
-      this.searchTerm.set(value);  // Correct way to update signal value
+      this.searchTerm.set(value);  //update signal value
       this.applyFilter(value);
     });
   }

@@ -8,7 +8,7 @@ import { Employee } from '../models/employee.model';
   providedIn: 'root'
 })
 export class EmployeeService {
-  private apiUrl = 'http://localhost:3000/employees'; // Backend API URL
+  private apiUrl = 'http://localhost:3000/employees'; // Backend employee data
   private loginUrl = 'http://localhost:3000/login'; // URL for login endpoint
 
   constructor(private http: HttpClient) {}
@@ -20,6 +20,7 @@ export class EmployeeService {
         if (response && response.token) {
           localStorage.setItem('authToken', response.token); // Save token to localStorage
           console.log('Login successful, token saved');
+          alert('Login successful');
         } else {
           console.error('Login failed: No token received');
         }
@@ -30,7 +31,7 @@ export class EmployeeService {
 
   // Method to generate Authorization headers for API requests
   private createAuthHeaders(): HttpHeaders {
-    const token = localStorage.getItem('authToken'); // Get token from localStorage
+    const token = localStorage.getItem('authToken'); 
     if (!token) {
       console.error('No auth token found. User might not be logged in.');
     }
@@ -45,7 +46,7 @@ export class EmployeeService {
     const headers = this.createAuthHeaders();
     return this.http.get<Employee[]>(this.apiUrl, { headers }).pipe(
       tap(employees => console.log('Fetched employees:', employees)),
-      catchError(this.handleError) // Handle errors
+      catchError(this.handleError) 
     );
   }
 
@@ -54,13 +55,13 @@ export class EmployeeService {
     const headers = this.createAuthHeaders();
     return this.http.get<Employee>(`${this.apiUrl}/${id}`, { headers }).pipe(
       tap(employee => console.log('Fetched employee:', employee)),
-      catchError(this.handleError) // Handle errors
+      catchError(this.handleError) 
     );
   }
 
   // Logout method to clear auth token
   logout(): void {
-    localStorage.removeItem('authToken'); // Remove token from localStorage
+    localStorage.removeItem('authToken'); 
     console.log('Logged out and cleared auth token');
   }
 

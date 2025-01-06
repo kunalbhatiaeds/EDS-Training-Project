@@ -1,9 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { EmployeeService } from '../employees/services/employee.service'; 
-import { Employee } from '../employees/models/employee.model'; // Import Employee model
+import { Employee } from '../employees/models/employee.model'; 
 
-import { signal } from '@angular/core';  // Import signal from Angular core
+import { signal } from '@angular/core';  
 
 @Component({
   selector: 'app-employee-detail',
@@ -16,7 +16,7 @@ export class EmployeeDetailsComponent implements OnInit, OnDestroy {
 
   constructor(
     private route: ActivatedRoute,
-    private employeeService: EmployeeService // Inject the employee service
+    private employeeService: EmployeeService 
   ) {}
 
   ngOnInit(): void {

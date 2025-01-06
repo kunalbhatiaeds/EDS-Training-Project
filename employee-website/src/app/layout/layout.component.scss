@@ -5,7 +5,7 @@
   }
   
   .mat-toolbar {
-    background: linear-gradient(135deg, #3f51b5, #1a237e); /* Gradient background for the toolbar */
+    background: linear-gradient(135deg, #1a4d54, #4f9a94); 
     color: white;
   }
   
@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background: #f5f5f5; /* Light background for the content area */
+    background: #f5f5f5; 
   }
   
   .content {
@@ -32,7 +32,7 @@
     padding: 20px;
     background: white;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for the content area */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     overflow: auto;
   }
   
@@ -52,15 +52,15 @@
   }
 
   .header-logo {
-    width: 40px; /* Adjust the size of the logo */
+    width: 40px;
     height: 40px;
-    margin-left: auto; /* Push the logo to the far right */
-    border-radius: 50%; /* Optional: Make the logo circular */
+    margin-left: auto; 
+    border-radius: 50%; 
     object-fit: contain;
-    cursor: pointer; /* Optional: Show a pointer cursor on hover */
+    cursor: pointer; 
   }
   
   .top-toolbar {
-    display: flex; /* Ensure child elements are aligned properly */
+    display: flex; 
     align-items: center;
   }

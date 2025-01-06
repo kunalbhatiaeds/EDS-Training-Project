@@ -1,26 +1,24 @@
-/* Center the content on the page */
 :host {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background: linear-gradient(135deg, #2196f3, #bbdefb); /* Vibrant gradient background in blue shades */
-  font-family: 'Roboto', sans-serif; /* A modern font */
+  background-color: #e0f7fa;
+  font-family: 'Roboto', sans-serif; 
 }
 
-/* Style the container */
 .container {
   background: #ffffff;
   padding: 2rem;
-  border-radius: 12px; /* Rounded corners for a softer look */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Larger shadow for depth */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
   width: 100%;
   max-width: 600px;
-  transition: transform 0.3s ease; /* Smooth hover effect for the container */
+  transition: transform 0.3s ease; 
 }
 
 .container:hover {
-  transform: scale(1.02); /* Slight zoom effect on hover */
+  transform: scale(1.02); 
 }
 
 /* Style the header */
@@ -29,7 +27,7 @@ h2 {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  color: #1e88e5; /* Vibrant blue color */
+  color: #1e88e5; 
 }
 
 /* Style the details */
@@ -50,13 +48,13 @@ h2 {
 }
 
 .details p:hover {
-  background: #e3f2fd; /* Light blue background on hover */
+  background: #e3f2fd; 
 }
 
 /* Style the labels */
 .label {
   font-weight: bold;
-  color: #1565c0; /* Darker blue color */
+  color: #1565c0; 
 }
 
 /* Style the values */
@@ -64,12 +62,10 @@ h2 {
   color: #555;
 }
 
-/* Add some spacing between the details */
 .details p + p {
   margin-top: 0.5rem;
 }
 
-/* Responsive design adjustments */
 @media (max-width: 480px) {
   .container {
     max-width: 90%;

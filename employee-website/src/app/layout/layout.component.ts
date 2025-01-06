@@ -7,13 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent {
-  // Create a signal to store user state (e.g., logged in status)
+
   loggedIn = signal<boolean>(true); // True indicates the user is logged in
 
   constructor(private router: Router) {}
 
   logout() {
-    localStorage.removeItem('accessToken'); // Remove the access token
+    localStorage.removeItem('accessToken');
     this.loggedIn.set(false); // Update the logged-in state with signal
     this.router.navigate(['/']); // Redirect to the login page
   }

@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { EmployeeService } from './employee.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { AppModule } from '../../app.module';  // Import the AppModule
+import { AppModule } from '../../app.module';  
 
 describe('EmployeeService', () => {
   let service: EmployeeService;
@@ -9,8 +9,8 @@ describe('EmployeeService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [AppModule, HttpClientTestingModule],  // Import necessary modules
-      providers: [EmployeeService]  // Provide the service for testing
+      imports: [AppModule, HttpClientTestingModule], 
+      providers: [EmployeeService] 
     });
     
     service = TestBed.inject(EmployeeService);  // Inject the service
@@ -18,7 +18,7 @@ describe('EmployeeService', () => {
   });
 
   it('should be created', () => {
-    expect(service).toBeTruthy();  // Test if the service is created
+    expect(service).toBeTruthy();  
   });
 
   afterEach(() => {
